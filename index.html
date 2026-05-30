@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pengumuman Kelulusan – SMP Negeri 2 Sidoharjo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="data.js"></script>
+</head>
+<body>
+
+  <!-- Decorative blobs -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+
+  <div class="wrapper">
+
+    <!-- ── HEADER ── -->
+    <header class="site-header">
+      <div class="logo-ring">
+        <img src="logo.jpg" alt="Logo SMPN 2 Sidoharjo" class="logo-img" />
+      </div>
+      <div class="header-text">
+        <p class="school-sub">Pengumuman Kelulusan Resmi</p>
+        <h1 class="school-name">SMP Negeri 2<br/>Sidoharjo</h1>
+        <p class="school-meta">Kab. Sragen, Jawa Tengah &nbsp;·&nbsp; Tahun Pelajaran 2025/2026</p>
+        <div class="motto-strip">
+          <span>"Bertakwa, Berprestasi, Peduli, dan Berbudaya Lingkungan"
+        </div>
+      </div>
+    </header>
+
+    <!-- ── DIVIDER ── -->
+    <div class="leaf-divider">
+      <svg viewBox="0 0 400 20" preserveAspectRatio="none"><path d="M0 10 Q100 0 200 10 Q300 20 400 10" stroke="#16a34a" stroke-width="1.5" fill="none" opacity="0.4"/></svg>
+    </div>
+
+    <!-- ── SEARCH SECTION ── -->
+    <section class="search-section">
+      <p class="search-label">Masukkan NISN Anda untuk melihat status kelulusan</p>
+      <div class="search-card">
+        <div class="search-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </div>
+        <input
+          type="text"
+          id="nisnInput"
+          inputmode="numeric"
+          maxlength="20"
+          placeholder="Contoh: 109338150"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <button id="searchBtn" type="button">
+          <span>Cek Kelulusan</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+      <p class="hint-text">Ketik NISN lalu tekan <kbd>Enter</kbd> atau klik tombol di atas</p>
+    </section>
+
+    <!-- ── RESULT ── -->
+    <section id="resultSection" class="result-section hidden">
+
+      <!-- Not Found -->
+      <div id="notFound" class="not-found hidden">
+        <div class="nf-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>
+        </div>
+        <h3>NISN Tidak Ditemukan</h3>
+        <p>Pastikan NISN yang Anda masukkan sudah benar, lalu coba lagi.</p>
+      </div>
+
+      <!-- Found -->
+      <div id="foundCard" class="found-card hidden">
+        <div class="found-header">
+          <div class="check-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>
+          </div>
+          <div>
+            <p class="found-label">Hasil Pencarian</p>
+            <p class="found-year">T.P. 2025/2026 – SMP Negeri 2 Sidoharjo</p>
+          </div>
+        </div>
+
+        <div class="found-body">
+          <div class="info-row">
+            <span class="info-key">Nama Lengkap</span>
+            <span class="info-val" id="resNama">–</span>
+          </div>
+          <div class="info-row">
+            <span class="info-key">NISN</span>
+            <span class="info-val" id="resNisn">–</span>
+          </div>
+          <div class="info-row">
+            <span class="info-key">NIS</span>
+            <span class="info-val" id="resNis">–</span>
+          </div>
+          <div class="info-row status-row">
+            <span class="info-key">Status Kelulusan</span>
+            <span class="status-badge" id="resStatus">LULUS</span>
+          </div>
+        </div>
+
+        <div class="found-footer">
+          <p>Selamat! Semoga sukses di jenjang berikutnya </p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer class="site-footer">
+      <div class="footer-line"></div>
+      <p>© 2026 SMP Negeri 2 Sidoharjo &nbsp;·&nbsp; Pengumuman Kelulusan Online</p>
+      <p class="footer-sub">Jl. Raya Sidoharjo, Kec. Sidoharjo, Kab. Sragen, Jawa Tengah</p>
+    </footer>
+
+  </div><!-- /wrapper -->
+
+  <script src="script.js"></script>
+</body>
+</html>
